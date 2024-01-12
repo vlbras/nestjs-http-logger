@@ -1,0 +1,36 @@
+{
+  "name": "nestjs-http-logger",
+  "version": "1.0.3",
+  "description": "NestJS middleware for Logging HTTP requests and responses",
+  "author": "Vladyslav Braslavskyi <vladyslav.braslavskyi@gmail.com>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "nestjs",
+    "express",
+    "middleware",
+    "logger",
+    "http"
+  ],
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.2.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vlbras/nestjs-http-logger.git"
+  },
+  "homepage": "https://github.com/vlbras/nestjs-http-logger#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}
