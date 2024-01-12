@@ -1,6 +1,6 @@
 {
   "name": "nestjs-http-logger",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "NestJS middleware for Logging HTTP requests and responses",
   "author": "Vladyslav Braslavskyi <vladyslav.braslavskyi@gmail.com>",
   "license": "MIT",
