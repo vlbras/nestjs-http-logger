@@ -39,7 +39,7 @@ export class LoggerMiddleware implements NestMiddleware {
     response.on("finish", () => {
       const duration = Date.now() - startTime;
       const title = `[${this.id}] ${response.statusCode} ${request.originalUrl} ${duration}ms`;
-      this.logResponse(title, responseBody);
+      this.logResponse(title, responseBody, response.statusCode);
       this.id++;
     });
 
@@ -61,10 +61,9 @@ export class LoggerMiddleware implements NestMiddleware {
     this.logger.log(title + " " + this.CONTENT_COLOR + JSON.stringify(content));
   }
 
-  private logResponse(title: string, responseBody: any) {
-    const statusCode = JSON.parse(responseBody).statusCode;
+  private logResponse(title: string, response: Body, statusCode: number) {
     if (statusCode >= 400) {
-      this.logger.error(title + " " + this.CONTENT_COLOR + responseBody);
+      this.logger.error(title + " " + this.CONTENT_COLOR + response);
     } else {
       this.logger.log(this.TITLE_COLOR + title);
     }
